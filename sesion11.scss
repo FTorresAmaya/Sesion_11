@@ -1,6 +1,10 @@
-body{
-    margin: 0%;
+$alto: 100vh;
+$ancho: 100%;
 
+body {
+    margin: 0%;
+    height: $alto;
+    width: $ancho;
 }
 div {
     position: absolute;
@@ -14,26 +18,35 @@ div {
     border-style: dotted;
     width: 100px;
     height: 100px;
-    animation: move 5s linear infinite;
-    animation: movetoright 5s linear infinite;
-    animation-name: move, movetoright ;
+    animation-name: move;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
 }
 
 @keyframes move {
-    from {
-        top: 0;
+    0% { 
+        background-color: aquamarine;
+        width: 100px;
+        top: 0; 
+        left: 0; 
     }
-    to {
-        top: 100%;   
+    30% { 
+        background-color: rebeccapurple;
+        width: 80px;
+        top: calc(100% - 100px); 
+        left: 0;
     }
-}
-
-@keyframes movetoright {
-    from {
-        top: 100%;
+    65% { 
+        width: 20px;
+        background-color: gray;
+        top: calc(100% - 100px); 
+        left: calc(100% - 100px); 
     }
-    to {
-        right: 0;
-
+    100% { 
+        width: 10px;
+        background-color: black;
+        top: 0; 
+        left: calc(100% - 100px); 
     }
 }
