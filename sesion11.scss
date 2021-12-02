@@ -1,0 +1,39 @@
+body{
+    margin: 0%;
+
+}
+div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px;
+    border-color: red;
+    border-style: dotted;
+    width: 100px;
+    height: 100px;
+    animation: move 5s linear infinite;
+    animation: movetoright 5s linear infinite;
+    animation-name: move, movetoright ;
+}
+
+@keyframes move {
+    from {
+        top: 0;
+    }
+    to {
+        top: 100%;   
+    }
+}
+
+@keyframes movetoright {
+    from {
+        top: 100%;
+    }
+    to {
+        right: 0;
+
+    }
+}

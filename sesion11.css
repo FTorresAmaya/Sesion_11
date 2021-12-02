@@ -1,0 +1,66 @@
+body {
+  margin: 0%;
+}
+
+div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px;
+  border-color: red;
+  border-style: dotted;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: move 5s linear infinite;
+          animation: move 5s linear infinite;
+  -webkit-animation: movetoright 5s linear infinite;
+          animation: movetoright 5s linear infinite;
+  -webkit-animation-name: move, movetoright;
+          animation-name: move, movetoright;
+}
+
+@-webkit-keyframes move {
+  from {
+    top: 0;
+  }
+  to {
+    top: 100%;
+  }
+}
+
+@keyframes move {
+  from {
+    top: 0;
+  }
+  to {
+    top: 100%;
+  }
+}
+
+@-webkit-keyframes movetoright {
+  from {
+    top: 100%;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes movetoright {
+  from {
+    top: 100%;
+  }
+  to {
+    right: 0;
+  }
+}
+/*# sourceMappingURL=sesion11.css.map */
